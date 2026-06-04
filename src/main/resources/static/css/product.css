@@ -1,0 +1,230 @@
+/* product.css */
+
+/* ===============================
+   PRODUCT GRID
+================================ */
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===============================
+   PRODUCT CARD
+================================ */
+.product {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   PRODUCT IMAGE
+================================ */
+.product img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* ===============================
+   PRODUCT TITLE
+================================ */
+.product h3 {
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+  transition: 0.2s;
+}
+
+.product h3:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* ===============================
+   PRICE
+================================ */
+.product p {
+  font-weight: bold;
+  color: #28a745;
+  margin: 5px 0;
+}
+
+/* ===============================
+   BUTTON (ONLY ADD TO CART)
+================================ */
+.product > button {
+  width: 100%;
+  padding: 8px;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product > button:hover {
+  background: #0056b3;
+}
+
+/* ===============================
+   QUANTITY STEPPER
+================================ */
+.qty-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.qty-box button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qty-box button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.qty-value {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* ===============================
+   PRODUCT DETAIL PAGE
+================================ */
+.product-detail-container {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.product-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* INFO */
+.product-info {
+  max-width: 400px;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 18px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 14px;
+  color: #555;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.product-detail-container {
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  background: white;
+  margin: 30px auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* RIGHT SIDE */
+.product-info {
+  max-width: 450px;
+}
+
+.product-info h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}

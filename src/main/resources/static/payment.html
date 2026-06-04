@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+
+
+<div id="header"></div>
+
+<div class="payment-container">
+    <h2>Secure Payment</h2>
+
+    <div class="order-summary">
+        <p>Order Amount</p>
+        <p class="amount">₹<span id="amount"></span></p>
+    </div>
+
+    <div class="payment-info">
+        You will be redirected to Razorpay to complete the payment securely.
+    </div>
+
+
+
+    <div class="payment-actions">
+        <button class="pay-btn" onclick="payNow()">Pay Now</button>
+        <button class="cancel-btn" onclick="cancelPayment()">Cancel</button>
+    </div>
+</div>
+
+<div id="payment-loader" class="loader-overlay" style="display:none;">
+    <div class="loader-box">
+        <div class="spinner"></div>
+        <p>Verifying payment, please wait...</p>
+    </div>
+</div>
+
+<!-- ✅ PAYMENT FAILURE MODAL -->
+<div id="payment-failure-modal" class="failure-overlay" style="display:none;">
+    <div class="failure-box">
+        <h3>❌ Payment Failed</h3>
+        <p>Your payment could not be completed or verified.</p>
+
+        <div class="failure-actions">
+            <button class="retry-btn" onclick="retryPayment()">Retry Payment</button>
+            <button class="cancel-btn" onclick="cancelAfterFailure()">Go to Cart</button>
+        </div>
+    </div>
+</div>
+
+<script src="common.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="payment.js"></script>
+
+<!-- ✅ PAYMENT LOADING OVERLAY -->
+
+</body>
+</html>

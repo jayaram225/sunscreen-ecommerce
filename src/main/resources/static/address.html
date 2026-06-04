@@ -1,0 +1,41 @@
+<!--address.html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/address.css">
+
+</head>
+<body>
+<div id="header"></div>
+
+<h2 class="address-title">Add New Address</h2>
+
+<div class="address-form">
+
+    <input id="fullName" placeholder="Full Name">
+    <input id="phone" placeholder="Phone">
+    <input id="street" placeholder="Street">
+    <input id="city" placeholder="City">
+    <input id="state" placeholder="State">
+    <input id="pincode" placeholder="Pincode">
+
+    <button onclick="addAddress()">Save Address</button>
+
+</div>
+
+<hr>
+
+<h2 class="address-title">My Addresses</h2>
+
+<div id="address-container"></div>
+
+<script src="common.js"></script>
+
+<script src="address.js"></script>
+
+</body>
+</html>

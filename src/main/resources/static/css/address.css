@@ -1,0 +1,132 @@
+/* address.css */
+
+/* ===============================
+   ADDRESS PAGE LAYOUT
+================================ */
+
+.address-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* FORM CONTAINER */
+.address-form {
+  width: 40%;
+  margin: 20px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* INPUT FIELDS */
+.address-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.address-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* SAVE BUTTON */
+.address-form button {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.address-form button:hover {
+  background: #1e7e34;
+}
+
+/* ADDRESS LIST */
+#address-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ADDRESS CARD */
+.address-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.address-card:hover {
+  transform: scale(1.01);
+  border-color: #007bff;
+}
+
+/* NO ADDRESS MESSAGE */
+.empty-msg {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ===============================
+   ADDRESS CARD FIX
+================================ */
+
+.address-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.address-card:hover {
+  border-color: #007bff;
+}
+
+/* LABEL STRUCTURE */
+.address-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* RADIO BUTTON FIX */
+.address-label input[type="radio"] {
+  margin-top: 5px;
+  transform: scale(1.2);
+}
+
+/* TEXT BLOCK */
+.address-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-info p {
+  margin: 3px 0;
+  color: #555;
+}
+
+.address-info small {
+  color: gray;
+}

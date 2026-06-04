@@ -1,0 +1,78 @@
+/* checkout.css */
+
+/* ===============================
+   CHECKOUT PAGE LAYOUT
+================================ */
+
+#address-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ADDRESS CARD */
+.address-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.address-card:hover {
+  transform: scale(1.01);
+  border-color: #007bff;
+}
+
+/* SELECTED ADDRESS */
+.address-card.selected {
+  border: 2px solid #007bff;
+  background: #f0f8ff;
+}
+
+/* RADIO BUTTON */
+.address-card input[type="radio"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ADD ADDRESS BUTTON */
+#address-container button {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+
+#address-container button:hover {
+  background: #1e7e34;
+}
+
+/* PLACE ORDER BUTTON AREA */
+.checkout-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.checkout-actions button {
+  padding: 12px 18px;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.checkout-actions button:hover {
+  background: #0056b3;
+}

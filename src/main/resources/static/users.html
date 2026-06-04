@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Users</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="admin-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">Admin Panel</h2>
+
+        <button onclick="goToAdmin()">Dashboard</button>
+        <button onclick="goToAdminProducts()">Products</button>
+        <button onclick="goToAdminOrders()">Orders</button>
+        <button class="active" onclick="goToUsers()">Users</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="page-header">
+            <h1>User Management</h1>
+            <p>Manage all users, roles and status</p>
+        </div>
+
+        <div class="search-box">
+            <input
+                    type="text"
+                    id="userSearch"
+                    placeholder="Search user..."
+                    onkeyup="filterUsers()"
+            />
+        </div>
+
+        <div class="filter-box">
+            <button class="active-filter" onclick="applyUserFilter('ALL')">All</button>
+            <button onclick="applyUserFilter('ACTIVE')">Active</button>
+            <button onclick="applyUserFilter('BLOCKED')">Blocked</button>
+        </div>
+
+        <table class="admin-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+
+    </div>
+</div>
+
+<script src="common.js"></script>
+<script src="user-admin.js"></script>
+
+</body>
+</html>

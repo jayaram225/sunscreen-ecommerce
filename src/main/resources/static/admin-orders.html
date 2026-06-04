@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Orders</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="admin-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">Admin Panel</h2>
+
+        <button onclick="goToAdmin()">Dashboard</button>
+        <button onclick="goToAdminProducts()">Products</button>
+        <button class="active" onclick="goToAdminOrders()">Orders</button>
+        <button onclick="goToUsers()">Users</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div class="page-header">
+            <h1>Order Management</h1>
+            <p>Manage and update all customer orders</p>
+        </div>
+8
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input
+                    type="text"
+                    id="orderSearch"
+                    placeholder="Search by Order ID or User ID..."
+                    onkeyup="filterOrders()"
+            />
+        </div>
+
+        <div class="filter-box">
+            <button onclick="applyFilter('ALL')">All</button>
+            <button onclick="applyFilter('PENDING')">Pending</button>
+            <button onclick="applyFilter('SHIPPED')">Shipped</button>
+            <button onclick="applyFilter('DELIVERED')">Delivered</button>
+            <button onclick="applyFilter('CANCELLED')">Cancelled</button>
+        </div>
+
+        <!-- TABLE -->
+        <table class="admin-table">
+            <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Change Status</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+            <tbody id="orderTable"></tbody>
+        </table>
+
+    </div>
+</div>
+
+<script src="common.js"></script>
+<script src="order-admin.js"></script>
+
+</body>
+</html>

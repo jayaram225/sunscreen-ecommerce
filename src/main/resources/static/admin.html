@@ -1,0 +1,64 @@
+<!-- admin.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header"></div>
+
+<div class="admin-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h3>Admin Panel</h3>
+
+        <button class="active" onclick="goToAdmin()">Dashboard</button>
+        <button onclick="goToAdminProducts()">Products</button>
+        <button onclick="goToAdminOrders()">Orders</button>
+        <button onclick="goToUsers()">Users</button>
+
+
+
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Welcome Admin 👨‍💼</h1>
+        <div class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p id="totalOrders">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="totalRevenue">₹0</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* ===== PAYMENT PAGE ===== */
+
+.payment-container {
+  width: 400px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-summary {
+  background: #f5f6f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.order-summary p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.order-summary .amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.payment-info {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pay-btn {
+  background: #007bff;
+  color: white;
+}
+
+.pay-btn:hover {
+  background: #0056b3;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #a71d2a;
+}
+
+/* ===== PAYMENT LOADER ===== */
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-box {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+}
+
+.loader-box p {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #ddd;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== PAYMENT FAILURE MODAL ===== */
+
+.failure-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.failure-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+}
+
+.failure-box h3 {
+  margin-bottom: 10px;
+}
+
+.failure-box p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.failure-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.failure-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.retry-btn {
+  background: #007bff;
+  color: white;
+}
+
+.retry-btn:hover {
+  background: #0056b3;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #a71d2a;
+}

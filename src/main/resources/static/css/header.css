@@ -1,0 +1,30 @@
+/* header.css */
+
+.main-header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.main-header h2 {
+  margin: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.main-header h2:hover {
+  color: #ffcc00;
+}
+
+.main-header button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}

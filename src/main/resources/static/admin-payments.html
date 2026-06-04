@@ -1,0 +1,45 @@
+<h2>All Payments (Admin)</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>User</th>
+        <th>Order ID</th>
+        <th>Payment ID</th>
+        <th>Amount</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody id="adminTable"></tbody>
+</table>
+
+<script>
+    fetch("http://localhost:8080/admin/all", {
+      headers: {
+        "Authorization": "Bearer " + localStorage.getItem("token")
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+
+      console.log("ADMIN DATA:", data);
+
+      const list = data.data || data; // 🔥 FIX
+
+      const table = document.getElementById("adminTable");
+      table.innerHTML = "";
+
+      list.forEach(p => {
+        table.innerHTML += `
+          <tr>
+            <td>${p.user?.id || "-"}</td>
+            <td>${p.razorpayOrderId}</td>
+            <td>${p.razorpayPaymentId || "-"}</td>
+            <td>₹${p.amount / 100}</td>
+            <td>${p.status}</td>
+          </tr>
+        `;
+      });
+
+    });
+</script>
