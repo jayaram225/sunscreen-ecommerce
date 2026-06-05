@@ -5,6 +5,7 @@ package com.sunscreen.backend.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +27,15 @@ public class FileUploadController {
 
             file.transferTo(dest);
 
-            return ResponseEntity.ok("http://localhost:8080/images/" + fileName);
+
+//  ADD THIS LINE HERE
+            String baseUrl = ServletUriComponentsBuilder
+                    .fromCurrentContextPath()
+                    .build()
+                    .toUriString();
+
+
+            return ResponseEntity.ok(baseUrl + "/images/" + fileName);
 
         } catch (Exception e) {
             e.printStackTrace();
