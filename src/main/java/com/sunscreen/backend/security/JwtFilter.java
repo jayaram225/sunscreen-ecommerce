@@ -31,6 +31,7 @@ public class JwtFilter extends OncePerRequestFilter {
                 || path.startsWith("/config")
 
 
+
 // Front end static permit
                 || path.startsWith("/css")
                 || path.endsWith(".js")

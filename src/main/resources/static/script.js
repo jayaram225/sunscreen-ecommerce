@@ -2,19 +2,24 @@
 
 const token = localStorage.getItem("token");
 
-
 if (!token) {
-  alert("Please login first");
-  window.location.href = "login.html";
+    console.log("Guest user browsing");
 }
+
 //  LOAD HEADER
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
 
-    const username = localStorage.getItem("username") || "User";
-    document.getElementById("username").innerText = "Hi, " + username;
+    const username = localStorage.getItem("username");
+
+if (username) {
+  document.getElementById("username").innerText = "Hi, " + username;
+} else {
+  document.getElementById("username").innerText = "Welcome Guest";
+}
+
 
     // ADD THIS
       const role = localStorage.getItem("role");
