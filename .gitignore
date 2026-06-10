@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# ✅ Ignore uploads folder
+uploads/
+
+# ✅ Ignore all project export versions
+FULL_PROJECT_*.txt
+
