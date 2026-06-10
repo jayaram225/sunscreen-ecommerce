@@ -23,18 +23,18 @@ public class PaymentController {
         this.paymentService = paymentService;
     }
 
-    // ✅ CREATE ORDER
+    //  CREATE ORDER
     @PostMapping("/create-order")
     public Map<String, Object> createOrder(@RequestParam int amount,
                                            HttpServletRequest request) throws Exception {
 
-        // 🔥 Get userId from JwtFilter
+        //  Get userId from JwtFilter
         int userId = (int) request.getAttribute("userId");
 
         return paymentService.createOrder(amount, userId);
     }
 
-    // ✅ VERIFY PAYMENT
+    //  VERIFY PAYMENT
     @PostMapping("/verify")
     public Map<String, Object> verify(@RequestBody PaymentVerifyRequest request,
                                       HttpServletRequest httpRequest) {

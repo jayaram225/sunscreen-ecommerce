@@ -97,6 +97,12 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<dependency>
+			<artifactId>cloudinary-http44</artifactId>
+			<groupId>com.cloudinary</groupId>
+			<version>1.36.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
